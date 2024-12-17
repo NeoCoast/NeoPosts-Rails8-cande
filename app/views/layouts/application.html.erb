@@ -8,6 +8,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= vite_client_tag %>
+    <%= vite_stylesheet_tag 'application', data: { "turbo-track": "reload" } %>
+    <%= vite_javascript_tag 'application' %>
+
+    <%= turbo_include_tags %>
+
+    <link rel="stylesheet" href="/vite-dev/assets/application-23aabef0.css" data-turbo-track="reload">
+    <script src="/vite-dev/assets/application-cda856d1.js" crossorigin="anonymous" type="module"></script>
+
     <%= yield :head %>
 
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
@@ -17,13 +26,6 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= hotwire_livereload_tags if Rails.env.development? %>
-    <%= vite_client_tag %>
-    <%= vite_javascript_tag 'application' %>
     <!--
       If using a TypeScript entrypoint file:
         vite_typescript_tag 'application'
@@ -36,7 +38,7 @@
 
   </head>
 
-  <body>
+  <body class="bg-customBackground">
     <%= yield %>
   </body>
 </html>

@@ -48,6 +48,8 @@ gem "thruster", require: false
 gem "rails_best_practices", "~> 1.23", ">= 1.23.2"
 gem "reek", "~> 6.3"
 gem "lefthook", "~> 1.9", ">= 1.9.2"
+gem "devise", "~> 4.9", ">= 4.9.4"
+gem "image_processing", "~> 1.13"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

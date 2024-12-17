@@ -1,0 +1,31 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.container {
+  @apply bg-white border border-accent rounded-lg py-8 px-12 w-fit flex-col m-auto my-8 text-left;
+}
+
+.container-title {
+  @apply text-2xl font-bold text-accent;
+}
+
+.field {
+  @apply my-4;
+}
+
+.input {
+  @apply w-full border rounded-lg mt-1;
+}
+
+.primary-button {
+  @apply bg-accent text-white rounded-lg py-2 px-4 my-2 w-fit ml-auto;
+}
+
+.secondary-button {
+  @apply bg-white text-accent border border-accent rounded-lg py-2 px-4 my-2 flex !w-fit ml-auto;
+}
+
+.link_button {
+  @apply text-accent flex justify-end;
+}
